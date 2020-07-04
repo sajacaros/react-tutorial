@@ -5,7 +5,7 @@ class App extends Component {
   render() {
     return (
       <div className="APP">
-        <h1 className="title">리액트 월드!!</h1>
+        <h1 className="title">리액트 스터디 시작~</h1>
       </div>
     );
   }

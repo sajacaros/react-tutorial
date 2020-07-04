@@ -1,5 +1,20 @@
 ### 01\_리액트 시작하기
 
+#### 01-1 리액트의 정체를 알아보자!
+
+- 어떤 프레임워크를 공부해야 할까?
+- 리액트의 개념과 장점은 무엇일까?
+  - 컴포넌트 기반으로 화면 구성
+  - 게임 엔진 원리 도입
+    - [Virtual DOM](https://auth0.com/blog/face-off-virtual-dom-vs-incremental-dom-vs-glimmer/)
+- 노드 패키지 매니저란 무엇일까?
+  - 자바스크립트 라이브러리 관리
+  - npm, yarn
+- 웹팩이란 무엇일까?
+  - ![webpack](./images/webpack_intro.png)
+
+#### 01-2 리액트 개발 환경 설치하기
+
 - 개발 환경 구축
   - nvm 설치
   - node 10.10.0 버전 설치
@@ -27,6 +42,8 @@
 - 비주얼 스튜디오 플러그인 설치
   - Reactjs code snippets
     - 리액트 템플릿 생성 도구
+    - jsx??
+      - [공식 홈페이지에서 확인](https://reactjs.org/)
     - RCC -기본 리액트 컴포넌트 코드 생성
     - RCCP
       - 리액트 컴포넌트를 프로퍼티 타입과 함께 생성
@@ -58,8 +75,6 @@
       - formatOnSave 입력
       - `Format On Save` 설정 체크
 
-#### 01-1 리액트의 정체를 알아보자!
-
-#### 01-2 리액트 개발 환경 설치하기
-
 #### 01-3 리액트 앱 수정하기
+
+- [소스 참조](../src/ch01/App.js)
