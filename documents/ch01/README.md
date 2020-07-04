@@ -6,9 +6,11 @@
 - 리액트의 개념과 장점은 무엇일까?
   - 컴포넌트 기반으로 화면 구성
   - 게임 엔진 원리 도입
-    - [Virtual DOM](https://auth0.com/blog/face-off-virtual-dom-vs-incremental-dom-vs-glimmer/)
+    - [Virtual DOM](https://reactjs.org/docs/faq-internals.html#what-is-the-virtual-dom)
+    - [virtual dom vs incremental dom](https://auth0.com/blog/face-off-virtual-dom-vs-incremental-dom-vs-glimmer/)
 - 노드 패키지 매니저란 무엇일까?
   - 자바스크립트 라이브러리 관리
+  - package.json에 정의됨
   - npm, yarn
 - 웹팩이란 무엇일까?
   - ![webpack](./images/webpack_intro.png)
@@ -32,13 +34,13 @@
     - `SKIP_PREFLIGHT_CHECK = true`
   - yarn 실행
     - `yarn.ps1 파일을 로드할 수 없습니다.` 에러 발생
-  - 파워쉘의 권한 설정 변경(RemoteSigned 설정)
-    ```
-    $ Set-ExecutionPolicy -Scope CurrentUser
-        ExecutionPolicy: RemoteSigned
-    ```
-- 패키지 다운로드
-  - yarn
+    - 파워쉘의 권한 설정 변경(RemoteSigned 설정)
+      ```
+      $ Set-ExecutionPolicy -Scope CurrentUser
+          ExecutionPolicy: RemoteSigned
+      ```
+  - 패키지 다운로드
+    - yarn
 - 비주얼 스튜디오 플러그인 설치
   - Reactjs code snippets
     - 리액트 템플릿 생성 도구
