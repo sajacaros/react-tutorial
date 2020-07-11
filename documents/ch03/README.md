@@ -125,7 +125,27 @@
 
 - 생명주기 함수 살펴보기
   - ![](./images/lifeCycle.png)
-- 생명주기 함수의 실행 과정 살펴보기
+  - 총 8개의 함수
+    - constructor(props) 함수
+      - 맨 처음에 생성될 때 한번만 호출
+      - super() 함수를 가장 위에 호출
+    - render() 함수
+      - render() 함수가 반화하는 JSX를 화면에 그려줌
+    - static getDerivedStateFromProps(pros,state) 함수
+      - 상위 컴포넌트에서 전달받은 프로퍼티로 state값을 연동할 때 주로 사용
+    - componentDidMount() 함수
+      - 컴포넌트가 화면에 모두 표현된 이후 해야할 작업 수행
+    - shouldComponentUpdate(nextProps, nextState) 함수
+      - 화면을 새로 출력해야 하는지 판단하는 함수
+      - forceUpdate() 함수를 호출하여 화면을 출력하면 이 함수는 호출되지 않음
+    - getSnapshotBeforeUpdate(prevProps, prevState) 함수
+      - 컴포넌트의 변경된 내용이 가상 화면에 완성된 이후 호출되는 함수
+      - DOM 정보에 접근할 때 사용
+    - componentDidUpdate(prevProps, prevState, snapshot) 함수
+      - DOM 정보를 변경할 때 사용
+    - componentWillUnmount() 함수
+      - 소멸되기 직전 호출되는 함수
+- [생명주기 함수의 실행 과정 살펴보기](../../src/ch03/lifeCycle.jsx)
   - 생성 주기
     - ![](./images/createCycle.png)
   - 갱신 과정
