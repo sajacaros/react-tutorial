@@ -43,7 +43,7 @@
 - 컴포넌트의 개념
   - MVC의 뷰를 독립적으로 구성
   - 웹사이트의 화면은 각 요소가 비슷하고 반복적으로 사용됨
-    - ![component](./images/component.png)
+    - ![component](https://github.com/sajacaros/react-tutorial/blob/master/documents/ch03/images/component.PNG?raw=true)
 - 간단한 컴포넌트 추가하고 화면으로 띄워보기
   - [TodaysPlan 컴포넌트 만들기](../../src/ch03/TodaysPlan.jsx)
 - import 문에서 파일 이름의 확장자가 생략된 이유
@@ -124,7 +124,7 @@
 #### 03-5 컴포넌트의 생명주기
 
 - 생명주기 함수 살펴보기
-  - ![](./images/lifeCycle.png)
+  - ![](https://github.com/sajacaros/react-tutorial/blob/master/documents/ch03/images/lifeCycle.PNG?raw=true)
   - 총 8개의 함수
     - constructor(props) 함수
       - 맨 처음에 생성될 때 한번만 호출
@@ -147,11 +147,11 @@
       - 소멸되기 직전 호출되는 함수
 - [생명주기 함수의 실행 과정 살펴보기](../../src/ch03/lifeCycle.jsx)
   - 생성 주기
-    - ![](./images/createCycle.png)
+    - ![](https://github.com/sajacaros/react-tutorial/blob/master/documents/ch03/images/createCycle.PNG?raw=true)
   - 갱신 과정
-    - ![](./images/updateCycle.png)
+    - ![](https://github.com/sajacaros/react-tutorial/blob/master/documents/ch03/images/updateCycle.PNG?raw=true)
   - 소멸 과정
-    - ![](./images/deleteCycle.png)
+    - ![](https://github.com/sajacaros/react-tutorial/blob/master/documents/ch03/images/deleteCycle.PNG?raw=true)
 - 카운터 프로그램 만들며 생명주기 함수 사용해 보기
 
 #### 03-6 클래스형 컴포넌트
