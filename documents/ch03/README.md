@@ -124,7 +124,7 @@
 #### 03-5 컴포넌트의 생명주기
 
 - 생명주기 함수 살펴보기
-  - ![](https://github.com/sajacaros/react-tutorial/blob/master/documents/ch03/images/lifeCycle.PNG?raw=true)
+  - ![](https://github.com/sajacaros/react-tutorial/blob/master/documents/ch03/images/reactLifeCycle.PNG?raw=true)
   - 총 8개의 함수
     - constructor(props) 함수
       - 맨 처음에 생성될 때 한번만 호출
