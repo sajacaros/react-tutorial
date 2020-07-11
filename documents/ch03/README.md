@@ -2,20 +2,102 @@
 
 #### 03-1 컴포넌트를 표현하는 JSX
 
+- JSX는 JavaScript XML의 줄임말
+  - 자바스크립트에 XML을 추가한 확장형 문법
 - JSX 사용해 보기
+  - [JSXSample.jsx](../../src/ch03/JSXSample.jsx)
+    - JSX는 html이 아니라 xml 규칙을 따르므로 `/>`로 끝남
 - JSX와 기존 개발 방법의 차이점 알아보기
+
+  - jsx code
+
+    ```
+    ReactDOM.render(
+      <App />,
+      document.getElementById('root'),
+    );
+    ```
+
+  - javascript code
+
+    ```
+    var img = document.createElement('img');
+    img.setAttribute('src', 'http://www.easyspub.co.kr/images/logo_footer.png');
+    var divEl = document.createElement('div');
+    divEl.innerText = '안녕하세요';
+    var welcomEl = document.createElement('div');
+    welcomEl.append(img);
+    welcomEl.append(divEl);
+
+    var root = document.getElementById('root');
+    root.append(welcomEl);
+    ```
+
 - JSX의 작동 원리 알아보기
+  - 리액트 엔진은 JSX의 XML 구조를 분석하여 자바스크립트 함수 코드로 변환
+    - React.createElement() 함수
+  - 선언형 화면(Declarative View) 기술
 
 #### 03-2 컴포넌트와 구성 요소
 
 - 컴포넌트의 개념
+  - MVC의 뷰를 독립적으로 구성
+  - 웹사이트의 화면은 각 요소가 비슷하고 반복적으로 사용됨
+    - ![component](./images/component.png)
 - 간단한 컴포넌트 추가하고 화면으로 띄워보기
+  - [TodaysPlan 컴포넌트 만들기](../../src/ch03/TodaysPlan.jsx)
+- import 문에서 파일 이름의 확장자가 생략된 이유
+  - create-react-app은 js나 jsx를 자동으로 찾도록 설정됨
+    - webpack module resolution 기능
+      - 확장자가 파일 이름에 있는 경우 해당 파일 임포트
+      - 확장자가 생략된 경우 확장자 옵션 목록을 보고 파일 임포트
+      - 파일이 없으면 같은 이름의 디렉토리를 찾고 index.js나 index.jsx 임포트
 - 컴포넌트 구성 요소 미리 살펴보기
+  - 프로퍼티
+    - 상위 컴포넌트에서 하위 컴포넌트로 전달
+    - 읽기 전용 데이터
+  - state
+    - 컴포넌트의 상태를 저장하고 변경할 수 있는 데이터
+  - 컨텍스트
+    - 부모 컴포넌트에서 생성하여 모든 자신 컴포넌트에 전달하는 데이트(6장 참고)
 
 #### 03-3 컴포넌트에 데이터를 전달하는 프로퍼티
 
 - 프로퍼티의 기초 알아보기
+  - 속성(attribute) 형태로 전달되는 값
+  - 상위 컴포넌트
+    ```
+    class App extends React.Component {
+      render() {
+        return (
+          <div className="body">
+            <MyComponent name="message" />
+          </div>
+        );
+      }
+    }
+    ```
+  - 하위 컴포넌트
+    ```
+    class MyComponent extends React.Compoenent {
+      render() {
+        const name = this.props.name;
+        return <span>{name}</span>;
+      }
+    }
+    ```
 - 프로퍼티의 다양한 사용 방법 알아보기
+  - console에서 확인 가능
+  - 프로퍼티의 자료형 선언
+    - [문자혈형 소스](../../src/ch03/PropsComponentApp.jsx)
+    - [다양한 프로퍼티 소스](../../src/ch03/ChildComponentApp.jsx)
+      - 변수에 객체를 담아 전달하는 방식 선호
+    - [불리언 프로퍼티 사용하기](../../src/ch03/BooleanComponentApp.jsx)
+    - [객체형 프로퍼티 사용하기](../../src/ch03/ObjectComponentApp.jsx)
+    - [필수 프로퍼티 사용하기](../../src/ch03/RequiredComponentApp.jsx)
+    - [프로퍼티에 기본값 지정하기](../../src/ch03/DefaultPropsComponentApp.jsx)
+    - [자식 프로퍼티 사용하기](../../src/ch03/ChildPropertyApp.jsx)
+      - 상위 컴포넌트에서 지정한 하위 컴포넌트의 자식 노드를 하위 컴포넌트에서 프로퍼티로 접근 가능
 
 #### 03-4 컴포넌트 상태 관리하기
 
