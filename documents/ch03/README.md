@@ -102,7 +102,24 @@
 #### 03-4 컴포넌트 상태 관리하기
 
 - state로 상태 관리하기
+
+  - state : 값을 변경할 수 있는 객체
+  - 버튼을 클릭하거나 값을 입력하는 이벤트와 함께 사용됨
+  - [소스](../../src/ch03/StateExampleApp.jsx)
+  - state를 사용할 때 주의할 점
+    - 생상자에서 반드시 초기화해야 함
+    - state 값을 변경할 때는 setState() 함수 사용
+      - 콤포넌트 라이프 사이클을 리액트 엔진이 정하기 때문
+    - setState() 함수는 비동기 처리
+    - setState() 코드 이후로 연결된 함수들의 실행이 완료되는 시점에 화면 동기화됨
+  - [setState() 함수에 함수 전달하기](../../src/ch03/StateExampleApp2.jsx)
+    - state에서 이전 상태값을 가져올 필요 없이 함수 인자로 제공됨
+
 - 클래스 인스턴스 변수와 forceUpdate() 함수로 state 관리하기
+  - 리액트 엔진의 라이프사이클과 관계없이 출력하고 싶다면
+    - state를 직접 변경후 forceUpdate() 함수 호출
+    - 비추
+  - [소스](../../src/ch03/ForceUpdateExample.jsx)
 
 #### 03-5 컴포넌트의 생명주기
 
