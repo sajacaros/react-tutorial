@@ -124,7 +124,14 @@
 #### 03-5 컴포넌트의 생명주기
 
 - 생명주기 함수 살펴보기
+  - ![](./images/lifeCycle.png)
 - 생명주기 함수의 실행 과정 살펴보기
+  - 생성 주기
+    - ![](./images/createCycle.png)
+  - 갱신 과정
+    - ![](./images/updateCycle.png)
+  - 소멸 과정
+    - ![](./images/deleteCycle.png)
 - 카운터 프로그램 만들며 생명주기 함수 사용해 보기
 
 #### 03-6 클래스형 컴포넌트
