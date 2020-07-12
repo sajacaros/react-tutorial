@@ -153,6 +153,7 @@
   - 소멸 과정
     - ![](https://github.com/sajacaros/react-tutorial/blob/master/documents/ch03/images/deleteCycle.PNG?raw=true)
 - 카운터 프로그램 만들며 생명주기 함수 사용해 보기
+  - [소스](../../src/ch03/CounterApp.jsx)
 
 #### 03-6 클래스형 컴포넌트
 
