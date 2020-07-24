@@ -7,6 +7,10 @@ class App extends Component {
     return (
       <div className="body">
         <TodaysPlan />
+        <TodaysPlan />
+        <TodaysPlan />
+        <TodaysPlan />
+        <TodaysPlan />
       </div>
     );
   }
