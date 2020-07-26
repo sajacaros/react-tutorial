@@ -81,7 +81,37 @@
 
 #### 05-2 하이어오더 컴포넌트 기초 개념 공부하기
 
+- 데코레이터 패턴
+  - 클래스 간의 종속성 없이 기능만을 공유
+- 하이어오더 컴포넌트는 함수나 클래스 형태의 컴포넌트를 반환할 수 있음
+  - 생명주기 함수를 확장해야할 경우에는 클래스형 컴포넌트를 반환
+  - 함수형 컴포넌트
+    ```
+    function higherOrderComponent(Component) {
+      return function Enhanced(props) {
+        return <Component {...props} />;
+      }
+    }
+    ```
+  - 클래스형 컴포넌트
+    ```
+    function higherOrderComponent(Component) {
+      return class Enhanced extends React.Component {
+        render() {
+          return <Component {...this.props} />;
+        }
+      }
+    }
+    ```
+  - 하이어오더 컴포넌트와 확장 컴포넌트의 이름은 with로 시작(암묵룰)
+  - [예제](../../src/stories/WithHoCStory.jsx)
+
 #### 05-3 하이어오더 컴포넌트 라이브러리 사용하기
+
+- recompose 라이브러리 설치
+- branch() 함수
+- withState() 함수
+- lifecycle() 함수
 
 #### 05-4 다중 하이어오더 컴포넌트 사용하기
 
