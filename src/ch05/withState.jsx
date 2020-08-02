@@ -2,7 +2,6 @@ import React from 'react';
 import withState from 'recompose/withState';
 import withHandlers from 'recompose/withHandlers';
 import Button from '../ch04/Button';
-import { useState } from 'react';
 
 export const withCountState = withState('count', 'setCount', 0);
 export const withCountHandlers = withHandlers({

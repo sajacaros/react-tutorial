@@ -31,7 +31,7 @@ class Input extends PureComponent {
     this.ref = ref;
   }
   render() {
-    const { errorMessage, label, name, value, type } = this.props;
+    const { errorMessage, label, name, value = '', type } = this.props;
     return (
       <div className="input-field">
         <input
@@ -42,7 +42,7 @@ class Input extends PureComponent {
           value={value}
           type={type}
         />
-        <label className="active" for={`input_${name}`}>
+        <label className="active" htmlFor={`input_${name}`}>
           {label}
         </label>
         {errorMessage && (

@@ -18,11 +18,11 @@ function RowDCComponent() {
 
 function TableComponent() {
   return (
-    <table>
+    <div>
       <RowBComponent />
       <RowCComponent />
       <RowDCComponent />
-    </table>
+    </div>
   );
 }
 
