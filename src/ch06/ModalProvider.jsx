@@ -44,7 +44,8 @@ class ModalProvider extends PureComponent {
               <Text>정말로 삭제 하시겠습니까?</Text>
             </div>
             <Button primary>예</Button>
-            <Button onPress={() => this.setState({ showModal: false })}>닫기</Button>
+            {/* <Button onPress={() => this.setState({ showModal: false })}>닫기</Button> */}
+            <Button onPress={this.handleClose}>닫기</Button>
           </Modal>
         )}
       </Provider>
