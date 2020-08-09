@@ -12,6 +12,7 @@ import AdvReduxApp05 from '../ch07/AdvReduxApp05';
 import AdvReduxApp06 from '../ch07/AdvReduxApp06';
 import AdvReduxApp07 from '../ch07/AdvReduxApp07';
 import AdvReduxApp08 from '../ch07/AdvReduxApp08';
+import SearchFilterReduxApp from '../ch07/SearchFilterReduxApp';
 
 storiesOf('Redux', module)
   .addWithJSX('createStore', () => <ReduxApp01 />)
@@ -24,4 +25,5 @@ storiesOf('Redux', module)
   .addWithJSX('payload 수정', () => <AdvReduxApp05 />)
   .addWithJSX('화면,데이터 컴포넌트', () => <AdvReduxApp06 />)
   .addWithJSX('데이터 컴포넌트에 액션 연결', () => <AdvReduxApp07 />)
-  .addWithJSX('5개의 액션 연결', () => <AdvReduxApp08 />);
+  .addWithJSX('5개의 액션 연결', () => <AdvReduxApp08 />)
+  .addWithJSX('search', () => <SearchFilterReduxApp />);

@@ -3,9 +3,10 @@
 #### 07-1 리덕스의 기초 알아보기
 
 - 스토어를 중심으로 리덕스 개념 알아보기
-  ![리덕스 스토어](./images/reduxWithStore.PNG)
-- 리덕스와 컨테스트 중 무엇을 사용해야 할까? -프로퍼티
-  - 상위 컴포넌트에서 하위 컴포넌트로 전달되는 읽기 전용 데이터
+  - ![리덕스 스토어](./images/reduxWithStore.PNG)
+- 리덕스와 컨테스트 중 무엇을 사용해야 할까?
+  - 프로퍼티
+    - 상위 컴포넌트에서 하위 컴포넌트로 전달되는 읽기 전용 데이터
   - state
     - 컴포넌트의 상태를 저장하고 변경할 수 있는 데이터
   - 컨텍스트
@@ -695,12 +696,28 @@
 #### 07-5 검색 기능 만들면서 리덕스 복습하기
 
 - 검색을 위한 검색 입력 항목 저장하기
+
   - 액션 구성하기
+    - [소스](../../src/ch07/actions/searchFilterActions.js)
   - 리듀서 구현하기
+    - [filter 리듀서 소스](../../src/ch07/reducers/searchFilterReducer.js)
   - 리듀서를 스토어에 추가하기
+    ```
+    export default {
+      loading,
+      user,
+      collection,
+      searchFilter,
+    };
+    ```
+
 - 검색창 만들기
+
   - 데이터 컴포넌트 만들기
+    - [filter 컨테이너 소스](../../src/ch07/containers/SearchFilterInputContainer.jsx)
+    - [리셋 컨테이너 소스](../../src/ch07/reducers/SearchResetButtonContainer.js)
   - 리덕스 앱에 검색창 추가하기
+
 - 검색 결과 목록 만들기
   - 화면 컴포넌트 만들기
   - 데이터 컴포넌트 만들기
