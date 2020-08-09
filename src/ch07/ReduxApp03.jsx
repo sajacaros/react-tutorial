@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { createStore } from 'redux';
-import { provider } from 'react-redux';
+import { Provider } from 'react-redux';
 
 const reducer = (state, action) => {
   const { type, payload } = action;
@@ -9,6 +9,18 @@ const reducer = (state, action) => {
       return {
         ...state,
         loading: payload,
+      };
+    }
+    case 'RESET_LOADING': {
+      return {
+        ...state,
+        loading: false,
+      };
+    }
+    case 'SET_USER': {
+      return {
+        ...state,
+        user: payload,
       };
     }
     default:
@@ -28,10 +40,13 @@ class ReduxApp extends PureComponent {
       type: 'SET_LOADING',
       payload: true,
     });
+
+    this.store.dispatch({ type: 'RESET_LOADING' });
+    this.store.dispatch({ type: 'SET_USER', payload: { name: 'Kim', age: 20 } });
   }
 
   render() {
-    return <provider store={this.store}>리덕스 예제</provider>;
+    return <Provider store={this.store}>리덕스 예제</Provider>;
   }
 }
 
